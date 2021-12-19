@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale-1.0">
+    <style>
+    
+    </style>
+
+
+    <title>Joshua Pierce Chapter 5</title>
+</head>
+<body>
+    <script>
+        function divisibles(div){
+            var i = 1
+            var count = 3
+            // while(i < 101){
+            //     
+            //     if(i % div == 0){
+            //         
+            //         document.write(i + "<br>");
+            //     }
+            //     i++;
+            // }
+
+            while(i < 101){
+                //uses i as a condition variable, increments at the end of the loop
+                if(count == div){
+                    //count == div write to doc
+                    count = 0;
+                    document.write(i + "<br>");
+                }
+                //increment counters
+                i++;
+                count++;
+            }
+        }
+        divisibles(3);
+        
+
+    </script>
+</body>
+</html>

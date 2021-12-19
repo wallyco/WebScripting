@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale-1.0">
+    <style>
+    
+    </style>
+
+    <title>Joshua Pierce Chapter 6</title>
+</head>
+<body>
+    <input type="button" id="startTimer" value="Start Timer"><br>
+    <input type="button" id="stopTimer" value="Stop Timer"><br>
+    <input type="button" id="resetTimer" value="Reset Timer"><br>
+
+    <p>Current Timer:</p><br>
+    <p id="displayTime"> 0:00 </p>
+    <script>
+        let v1 = 3;
+
+        let v2 = 4;
+
+
+        let equals = v1 * v2;
+
+
+        alert("3 times 4 = " + equals);
+
+        let timeInterval = setInterval(timeIncrease, 1000);
+        clearInterval(timeInterval);
+
+        var sec = 0;
+        var minute = 0;
+        var i = 0;
+       
+        function timeIncrease(){  
+            if(i == 0){
+                timeInterval = setInterval(timeIncrease, 1000);
+            }  
+            sec++;
+            if(sec == 60){
+                minute++;
+                sec = 0;
+            }
+            document.getElementById("displayTime").innerHTML = minute + ":" + sec;
+            i++;
+        }
+
+        function timeStop(){
+            clearInterval(timeInterval);
+            i = 0;
+        }
+
+        function timeReset(){
+            sec = 0;
+            minute = 0;
+            document.getElementById("displayTime").innerHTML = minute + ":" + sec;
+        }
+
+        document.getElementById("startTimer").addEventListener("click", timeIncrease);
+        document.getElementById("stopTimer").addEventListener("click", timeStop);
+        document.getElementById("resetTimer").addEventListener("click", timeReset);
+
+    </script>
+</body>
+</html>
+

@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale-1.0">
+    <style>
+    
+    </style>
+
+
+    <title>Joshua Pierce Chapter 4</title>
+</head>
+<body>
+    <h1>Redirecting</h1>
+    <p>Based on your age we will redirect you to another page</p>
+    <button id="btnOk">Go there</button>
+    <script>
+        var theAge = parseInt(prompt("Enter your age"));  
+
+        function myRedirect(){
+            if (theAge >= 21){
+                window.location.replace("http://espn.com");
+            }else{
+                window.location.replace("https://www.disney.com");
+            }
+        }
+        
+        document.getElementById("btnOk").addEventListener("click", myRedirect);
+
+    </script>
+</body>
+</html>
